@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+    height: 100vh;
+    background-image: url("https://cdn24.img.ria.ru/images/07e4/07/11/1574507481_0:160:3072:1888_1920x0_80_0_0_78db128ab5168752ec4d9f70b0ac4e5a.jpg");
+    background-size: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.roulette{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.roulette-wrap{
+    overflow: hidden;
+    height: 550px;
+    margin-top: 150px;
 }
 
-.App-link {
-  color: #61dafb;
+.element {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.win{
+    border: 5px solid #19b400;
+    transform: scale(1.2);
+}
+
+.btn{
+    padding: 10px;
+    font-size: 30px;
+    width: 200px;
+    color: white;
+    background-color: black;
+    transition: .2s;
+    border: none;
+}
+
+.btn:hover{
+    background-color: #3e004c;;
+}
+
+@media (max-width: 425px) {
+    #root{
+        height: 100%;
+    }
+
+    .roulette-wrap{
+        margin-top: 0;
+    }
 }
